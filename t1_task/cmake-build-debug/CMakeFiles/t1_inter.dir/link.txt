@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\t1_inter.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\t1_inter.dir/objects.a @CMakeFiles\t1_inter.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  -fopenmp -g -Wl,--whole-archive CMakeFiles\t1_inter.dir/objects.a -Wl,--no-whole-archive -o t1_inter.exe -Wl,--out-implib,libt1_inter.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\t1_inter.dir\linklibs.rsp

@@ -1,0 +1,3 @@
+C:/Users/peter/CLionProjects/t1_inter/cmake-build-debug/CMakeFiles/t1_inter.dir
+C:/Users/peter/CLionProjects/t1_inter/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/peter/CLionProjects/t1_inter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
