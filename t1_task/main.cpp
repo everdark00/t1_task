@@ -14,6 +14,8 @@
 #include <math.h>
 #include <omp.h>
 #include <iostream>
+#include <vector>
+#include <time.h>
 
 static const int iLoopLen = 10000000;
 static const int iFactor = 100;
@@ -56,21 +58,37 @@ void f2(double* pdArr)
 }
 
 
+
+
 int _tmain(int argc, _TCHAR* argv[]) {
     double dArr[iArrLen];
+
+    printf("*** Test0, check f2: ");
+    {
+        double* dArr1 = new double[iArrLen];
+        double* dArr2 = new double[iArrLen];
+
+        f1(dArr1);
+        f2(dArr2);
+        for(int i = 0; i < iArrLen; ++i) {
+            if (dArr1[i] != dArr2[i]) {
+                std::cout<<"error in f2"<<std::endl;
+            }
+        }
+        std::cout<<"f2 is correct"<<std::endl;
+    }
 
     printf("*** Test1: 1 thread ");
     {
         const DWORD tcStart = GetTickCount();
         for(int i=0; i<iFactor; ++i) {
-            f1( dArr );
-            }
-            const DWORD tcEnd = GetTickCount();
+            f1(dArr);
+        }
+        const DWORD tcEnd = GetTickCount();
         print_time_delta(tcStart,tcEnd);
     }
 
     printf("*** Test2: 10 threads (critical) ");
-
     {
         const DWORD tcStart = GetTickCount();
         for(int i=0; i<iFactor; ++i) {
@@ -78,6 +96,5 @@ int _tmain(int argc, _TCHAR* argv[]) {
         }
         const DWORD tcEnd = GetTickCount();
         print_time_delta(tcStart,tcEnd);
-        std::cout<<std::endl;
     }
 }

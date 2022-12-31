@@ -21,4 +21,8 @@ omp.h
 -
 iostream
 -
+vector
+-
+time.h
+-
 
