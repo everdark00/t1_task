@@ -76,6 +76,9 @@ int _tmain(int argc, _TCHAR* argv[]) {
             }
         }
         std::cout<<"f2 is correct"<<std::endl;
+        
+        delete[] dArr1;
+        delete[] dArr2;
     }
 
     printf("*** Test1: 1 thread ");
